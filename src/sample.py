@@ -17,6 +17,3 @@ class Sample:
         result *= 2
 
         return result
-      
-sample = Sample()
-print(sample.add_and_double(3,4))

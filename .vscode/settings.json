@@ -1,5 +1,11 @@
 {
-	"python.testing.pytestArgs": ["tests"],
 	"python.testing.unittestEnabled": false,
-	"python.testing.pytestEnabled": true
+	"python.testing.pytestEnabled": true,
+	// ファイル保存時にテスト対象コードを自動的に探索
+	"python.testing.autoTestDiscoverOnSaveEnabled": true,
+	// pytest実行時の引数設定
+	"python.testing.pytestArgs": ["--cov=src", "--cov-report", "xml"],
+
+	// エディタ左側のラインカバレッジ表示設定
+	"coverage-gutters.showGutterCoverage": true
 }
