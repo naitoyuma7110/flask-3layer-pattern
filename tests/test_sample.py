@@ -1,4 +1,4 @@
-from src import sample 
+from product import sample 
 import pytest
 
 # スキップ用フラグ
