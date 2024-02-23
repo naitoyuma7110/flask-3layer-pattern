@@ -1,5 +1,4 @@
-# Python開発環境の構築とPytest入門
-Pytestのチュートリアル
+# Python Flask
 
 ## 環境構築資料
 pyenv 導入  
