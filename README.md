@@ -1,6 +1,6 @@
 # Python 開発環境の構築
 
-## Python仮想環境
+## Python仮想環境(for windows)
 
 pyenv 導入  
 https://qiita.com/probabilityhill/items/9a22f395a1e93206c846
@@ -8,7 +8,7 @@ https://qiita.com/probabilityhill/items/9a22f395a1e93206c846
 pipenv 導入  
 https://zenn.dev/sql_geinin/articles/29f2b0a5c55db2
 
-## pytest資料
+## pytest設定(テストライブラリ)
 
 チュートリアル  
 https://tech.nkhn37.net/pytest-basics/
