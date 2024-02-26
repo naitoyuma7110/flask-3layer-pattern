@@ -1,4 +1,7 @@
 {
+	"editor.tabSize": 4,
+	"editor.insertSpaces": true,
+
 	"python.testing.unittestEnabled": false,
 	"python.testing.pytestEnabled": true,
 	// ファイル保存時にテスト対象コードを自動的に探索
@@ -7,5 +10,8 @@
 	"python.testing.pytestArgs": ["--cov=src", "--cov-report", "xml"],
 
 	// エディタ左側のラインカバレッジ表示設定
-	"coverage-gutters.showGutterCoverage": true
+	"coverage-gutters.showGutterCoverage": true,
+	// mypy設定
+	"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+	"mypy-type-checker.args": ["--config-file=mypy.ini"]
 }

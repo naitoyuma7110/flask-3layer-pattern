@@ -5,11 +5,12 @@ name = "pypi"
 
 [packages]
 flask = "*"
-sqlalchemy = "*"
 flask-sqlalchemy = "*"
 psycopg2 = "*"
 pytest = "*"
 pytest-cov = "*"
+black = "*"
+sqlalchemy = {extras = ["mypy"], version = "*"}
 
 [dev-packages]
 

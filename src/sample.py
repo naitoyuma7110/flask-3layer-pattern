@@ -2,7 +2,8 @@ class Sample:
     """Sampleクラス"""
 
     def add_and_double(self, x, y):
-        """xとyを足して2倍した値を返却する
+        """
+        xとyを足して2倍した値を返却する
 
         Args:
             x: 入力値1
