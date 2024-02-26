@@ -1,8 +1,6 @@
-# Python 開発環境の構築と Pytest 入門
+# Python 開発環境の構築
 
-Flask のチュートリアル
-
-## 環境構築資料
+## Python仮想環境
 
 pyenv 導入  
 https://qiita.com/probabilityhill/items/9a22f395a1e93206c846
