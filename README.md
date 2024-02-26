@@ -1,6 +1,6 @@
 # Python 開発環境の構築と Pytest 入門
 
-Pytest のチュートリアル
+Flask のチュートリアル
 
 ## 環境構築資料
 
