@@ -11,6 +11,9 @@ pytest = "*"
 pytest-cov = "*"
 black = "*"
 sqlalchemy = {extras = ["mypy"], version = "*"}
+shortuuid = "*"
+flask-cors = "*"
+pyyaml = "*"
 
 [dev-packages]
 

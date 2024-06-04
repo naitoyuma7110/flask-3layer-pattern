@@ -24,3 +24,7 @@ mypy 導入
 SQLAlchemy への対応
 
 - https://www.stackbuilders.com/blog/how-to-add-type-annotations-to-sqlalchemy-models/
+
+## DDD 資料
+
+https://www.youtube.com/watch?v=u_uKTDbUWh0

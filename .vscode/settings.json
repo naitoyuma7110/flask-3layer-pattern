@@ -13,5 +13,6 @@
 	"coverage-gutters.showGutterCoverage": true,
 	// mypy設定
 	"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-	"mypy-type-checker.args": ["--config-file=mypy.ini"]
+	"mypy-type-checker.args": ["--config-file=mypy.ini"],
+	"cSpell.words": ["jsonify"]
 }
