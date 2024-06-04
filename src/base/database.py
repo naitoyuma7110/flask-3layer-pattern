@@ -15,7 +15,6 @@ def init_db(app):
 # sampleデータベースとの接続セッションのキャッシュと取得
 def get_session(app:Flask) -> scoped_session:
     
-    # DBセッションのキャッシュ
     global db_sessions
     
     if KEY_DB in db_sessions:

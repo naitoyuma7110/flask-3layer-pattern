@@ -20,3 +20,5 @@ def get_local():
             db_config = yaml.safe_load(yamlfile)
         
     return  db_config['database']['uri']
+
+# TODO：本番用接続情報の取得
