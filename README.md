@@ -1,8 +1,6 @@
-# Python 開発環境の構築と Pytest 入門
+# Python 開発環境の構築
 
-Flask のチュートリアル
-
-## 環境構築資料
+## Python 仮想環境(for windows)
 
 pyenv 導入  
 https://qiita.com/probabilityhill/items/9a22f395a1e93206c846
@@ -10,16 +8,18 @@ https://qiita.com/probabilityhill/items/9a22f395a1e93206c846
 pipenv 導入  
 https://zenn.dev/sql_geinin/articles/29f2b0a5c55db2
 
-## チュートリアル資料
+## pytest 設定(テストライブラリ)
 
-pytest 入門  
+チュートリアル  
 https://tech.nkhn37.net/pytest-basics/
+
+各種設定  
+https://qiita.com/moshi/items/21a6ff0a20cd840f71ea
 
 ## Mypy 設定(静的コード解析)
 
-mypy 導入
-
-- https://zenn.dev/k0kishima/articles/5466aaeb57be7a
+mypy 導入  
+https://zenn.dev/k0kishima/articles/5466aaeb57be7a
 
 SQLAlchemy への対応
 
