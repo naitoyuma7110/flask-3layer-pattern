@@ -1,10 +1,9 @@
 import os
 
 class Config:
-    SECRET_KEY = os.urandom(24)
-    DB_URL = 'postgresql://postgres:postgres@localhost:5433/sample'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    ENV = 'product'
     
+    DB_URL = 'postgresql://postgres:postgres@localhost:5433/sample'    
     SAMPLE_API_PATH = "sample"
 
 class DevelopmentConfig(Config):

@@ -3,7 +3,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from flask import Flask
 from base.db.connect_info import get_db_connect_info
 
-def make_session(app: Flask):
+def make_session(app: Flask)->scoped_session:
     # アプリケーションの設定からDB接続情報を取得
     db_url = get_db_connect_info(app)
 
