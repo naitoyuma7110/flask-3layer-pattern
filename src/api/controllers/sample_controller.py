@@ -1,4 +1,6 @@
-from flask import Blueprint, Response, request
+from flask import Blueprint, jsonify
+from injector import inject
+from api.services.sample_service import ISampleService
 
 api = Blueprint('sample_controller', __name__)
 """
@@ -6,6 +8,15 @@ api = Blueprint('sample_controller', __name__)
 __name__ : このファイルのディレクトリ名
 """
 
-@api.route('/get_sample', methods=['GET'])
-def get_sample():
-    return 'sample'
+@api.route('/hello', methods=['GET'])
+def hello():
+    return 'hello'
+
+
+@api.route('/get_sample/<string:text>', methods=['GET'])
+@inject
+def get_sample(text: str, sample_service:ISampleService):
+    
+    result = sample_service.get_sample(text)
+    
+    return jsonify(result)
