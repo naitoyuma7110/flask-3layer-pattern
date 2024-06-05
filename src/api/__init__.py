@@ -1,8 +1,8 @@
 from flask import Flask
 from flask_cors import CORS
-from sqlalchemy.orm import scoped_session, sessionmaker
 from src.base.database import init_db 
-from src.api.routes import init_routes 
+from src.api.routes import init_routes
+from src.api.injector import init_di
 from src.config import config_classes
 
 def create_app(mode:str) -> Flask:
@@ -17,6 +17,8 @@ def create_app(mode:str) -> Flask:
             init_db(app)
             
             init_routes(app)
+            
+            init_di(app)
         
         except Exception as e:
 
