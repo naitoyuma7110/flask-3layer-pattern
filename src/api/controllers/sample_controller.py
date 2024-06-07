@@ -1,6 +1,8 @@
 from flask import Blueprint, jsonify
 from injector import inject
 from api.services.sample_service import ISampleService
+from base.utils import dataclass_util
+from base.response import success_response
 
 api = Blueprint('sample_controller', __name__)
 """
@@ -19,4 +21,4 @@ def get_sample(text: str, sample_service:ISampleService):
     
     result = sample_service.get_sample(text)
     
-    return jsonify(result)
+    return success_response(dataclass_util.todict(result))

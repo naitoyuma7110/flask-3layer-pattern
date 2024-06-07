@@ -12,6 +12,10 @@ class Sample:
     email:str | None = None
     created_at:datetime | str | None = None
     deleted_at:datetime | str | None = None
+    
+@dataclass
+class Samples:
+    samples:list[Sample]
 
 class ISampleService(ABC):
     
@@ -25,18 +29,18 @@ class SampleService(ISampleService):
         super().__init__()
         self.sample_repository = sample_repository
         
-    def get_sample(self, text) -> Sample:
+    def get_sample(self, text) -> list[Sample]:
         
         text = text
         
-        user_model:User = self.sample_repository.get_sample_users()
+        user_models:list[User] = self.sample_repository.get_sample_users()
         
-        sample = Sample(
+        samples = [Sample(
             sample=text,
             username=user_model.username,
             email=user_model.email,
             created_at=user_model.created_at,
             deleted_at=user_model.deleted_at
-        )
+        ) for user_model in user_models]
         
-        return sample
+        return Samples(samples)

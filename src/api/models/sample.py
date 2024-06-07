@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from typing import List
 from datetime import datetime
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 from sqlalchemy import String, Integer, DateTime, distinct
@@ -33,6 +32,6 @@ class SampleRepository(ISampleRepository):
         
         query_result  = get_session().query(
             distinct(User.id),User.username, User.email, User.created_at, User.deleted_at
-        ).first()
+        ).all()
         
         return query_result
