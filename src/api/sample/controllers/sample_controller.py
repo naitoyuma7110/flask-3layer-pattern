@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from injector import inject
-from api.services.sample_service import ISampleService
+from api.sample.services.sample_service import ISampleService
 from base.utils import dataclass_util
 from base.response import success_response
 

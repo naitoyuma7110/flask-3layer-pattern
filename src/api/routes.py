@@ -6,7 +6,7 @@ def init_routes(app:Flask)-> None:
     def root():
         return 'hello'
     
-    from api.controllers import sample_controller
+    from api.sample.controllers import sample_controller
     
     sample_api_context = "/sample" 
     

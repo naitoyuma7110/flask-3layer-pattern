@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from datetime import datetime
 from dataclasses import dataclass
 from injector import inject
-from api.models.sample import (ISampleRepository, User)
+from api.sample.models.sample import (ISampleRepository, User)
 from sqlalchemy import String, Integer, DateTime, distinct
 
 @dataclass
