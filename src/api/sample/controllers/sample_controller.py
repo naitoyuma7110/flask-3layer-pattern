@@ -28,7 +28,7 @@ def get_sample(text: str, sample_service:ISampleService):
 # @api.route('/sample', methods=['POST'])
 # @inject
 # def get_sample(text: str, sample_service:ISampleService):
-    
+
 #     try:
 #         req_json = {} if request.json is None else request.json
 #     except Exception:
