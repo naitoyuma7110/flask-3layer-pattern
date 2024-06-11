@@ -16,3 +16,6 @@ class InvalidParametersError(ResponseError):
         
         ResponseError.__init__(self)
         self.invalid_msgs = invalid_msgs
+        
+class UriNotFoundError(ResponseError):
+    error_type = msg.ERR_TYPE_URI_NOTFOUND
