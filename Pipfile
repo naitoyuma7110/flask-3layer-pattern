@@ -18,6 +18,7 @@ flask-injector = "*"
 injector = "*"
 marshmallow-sqlalchemy = "*"
 datetime = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

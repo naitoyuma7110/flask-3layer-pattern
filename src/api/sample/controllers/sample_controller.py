@@ -11,11 +11,6 @@ api = Blueprint('sample_controller', __name__)
 __name__ : このファイルのディレクトリ名
 """
 
-@api.route('/hello', methods=['GET'])
-def hello():
-    return 'hello'
-
-
 @api.route('/sample/<string:text>', methods=['GET'])
 @inject
 def get_sample(text: str, sample_service:ISampleService):
