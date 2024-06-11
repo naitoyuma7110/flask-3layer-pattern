@@ -2,7 +2,7 @@ import os
 import sys
 import pytest
 
-sys.path.append(os.path.abspath(os.path.dirname(os.abspath(__file__)) + "/../src/"))
+sys.path.append(os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + "/../src/"))
 
 @pytest.fixture(scope='session')
 def app():
