@@ -32,8 +32,6 @@ class TestSampleController(BaseTestController):
         
         headers:dict = self.make_header()
         
-        
-        
         # モックデータの設定
         mock_samples = Samples(
                 samples=[
@@ -41,15 +39,14 @@ class TestSampleController(BaseTestController):
                     Sample(sample="hello", username="jane_smith", email="jane@example.com")
                 ]
             )
-        
-        
+
         self.mock_sample_service.get_sample.return_value = mock_samples
-        
-        url = '/v1/sample/hello'
+
+        url = '/v1/sample/sample'
         res = client.get(self.ctx_path() + url, headers=headers)
-        
+
         assert res.status_code == 200
-        
+
         # レスポンスのJSONデータを取得
         json_data = res.get_json()
 
