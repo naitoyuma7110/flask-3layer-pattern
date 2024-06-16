@@ -42,5 +42,20 @@ def init_error_handler(app: Flask):
     from base.exception import (InvalidParametersError, UriNotFoundError)
     from base.response import (response_error_params, response_error_notfound)
     
+    @app.errorhandler(404)
+    def page_not_found(error):
+        response = {
+            "title": "指定されたURLは存在しません",
+            "type": "uri-not-found",
+            "status": 404
+        }
+        return jsonify(response), 404
+    
+    # 404 エラーをキャッチしてカスタム例外に置き換える
+    @app.errorhandler(404)
+    def handle_404_error(error):
+
+        return response_error_notfound(error)
+    
     app.register_error_handler(InvalidParametersError, response_error_params)    
     app.register_error_handler(UriNotFoundError,response_error_notfound)
