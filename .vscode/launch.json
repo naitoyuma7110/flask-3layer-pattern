@@ -8,7 +8,8 @@
 			"env": { "FLASK_APP": "src/app.py", "FLASK_DEBUG": "1" },
 			"args": ["run", "--no-debugger", "--no-reload"],
 			"jinja": false,
-			"autoStartBrowser": false
+			"autoStartBrowser": false,
+			"justMyCode": false
 		}
 	]
 }

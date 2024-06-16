@@ -19,6 +19,7 @@ injector = "*"
 marshmallow-sqlalchemy = "*"
 datetime = "*"
 python-dotenv = "*"
+debugpy = "*"
 
 [dev-packages]
 

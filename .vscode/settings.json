@@ -7,10 +7,31 @@
 	// ファイル保存時にテスト対象コードを自動的に探索
 	"python.testing.autoTestDiscoverOnSaveEnabled": true,
 	// // pytest実行時の引数設定
-	// "python.testing.pytestArgs": ["--cov=src", "--cov-report", "xml"],
+	// "python.testing.pytestArgs": ["tests", "--cov=src", "--cov-report", "xml"],
+
+	"python.testing.pytestArgs": [
+		"--disable-pytest-warnings",
+		"--capture=no",
+		"--cov=api.controllers",
+		"--cov=api.components",
+		"--cov=api.models",
+		"--cov=api.utils",
+		"--cov-branch",
+		"--cov-report=xml",
+		"${workspaceFolder}/tests"
+	],
+	"coverage-gutters.coverageFileNames": [
+		"lcov.info",
+		"cov.xml",
+		"coverage.xml",
+		"jacoco.xml",
+		"coverage.cobertura.xml"
+	],
+	"python.analysis.extraPaths": ["${workspaceFolder}/.venv/Lib/site-packages"],
 
 	// // エディタ左側のラインカバレッジ表示設定
-	// "coverage-gutters.showGutterCoverage": true,
+	"coverage-gutters.showGutterCoverage": true,
+
 	// mypy設定
 	"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
 	"mypy-type-checker.args": ["--config-file=mypy.ini"],
