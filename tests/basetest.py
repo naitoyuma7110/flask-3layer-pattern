@@ -2,7 +2,7 @@ from typing import Callable
 from flask.testing import FlaskClient
 from flask_injector import FlaskInjector
 
-class Basetest():
+class BaseTest():
     
     def get_client(self, app)-> FlaskClient:
         

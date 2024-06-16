@@ -1,7 +1,7 @@
 import os
-from tests.basetest import Basetest
+from tests.basetest import BaseTest
 
-class BaseTestController(Basetest):
+class BaseTestController(BaseTest):
     '''
     共通テストケース基底クラス
     '''
@@ -17,5 +17,7 @@ class BaseTestController(Basetest):
         
         return {'content-type':'application/json'}
     
-    def make_header_with_token(self, token_dict: dict) -> dict:
-        pass
+    def make_header_with_token(self) -> dict:
+        headers: dict = self.headers()
+        
+        return headers

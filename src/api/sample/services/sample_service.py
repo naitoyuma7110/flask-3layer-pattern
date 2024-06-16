@@ -10,8 +10,6 @@ class Sample:
     sample:str | None = None
     username:str  = "デフォルトname"
     email:str | None = None
-    created_at:datetime | str | None = None
-    deleted_at:datetime | str | None = None
     
 @dataclass
 class Samples:
@@ -38,9 +36,7 @@ class SampleService(ISampleService):
         samples = [Sample(
             sample=text,
             username=user_model.username,
-            email=user_model.email,
-            created_at=user_model.created_at,
-            deleted_at=user_model.deleted_at
+            email=user_model.email
         ) for user_model in user_models]
         
         return Samples(samples)
