@@ -1,5 +1,10 @@
 import message_config as msg 
 
+class InvalidContentTypeError(Exception):
+    
+    error_type = msg.ERR_TYPE_INVALID_CTYPE
+    
+
 class ResponseError(Exception):
     
     def __init__(self, error_type: str | None = None):
