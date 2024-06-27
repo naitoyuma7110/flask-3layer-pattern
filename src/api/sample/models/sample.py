@@ -9,6 +9,8 @@ from base.database import Base, get_session
 
 class User(Base):
     __tablename__ = 'users'
+    __table_args__ = {'extend_existing': True}  # 既存の定義を拡張
+    
     id:Mapped[int] = mapped_column(Integer(), nullable=False, primary_key=True, autoincrement=True)
     username:Mapped[str | None] = mapped_column(String(),  primary_key=False)
     email:Mapped[str | None] = mapped_column(String(),  primary_key=False)
